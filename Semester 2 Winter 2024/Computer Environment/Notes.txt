@@ -1,0 +1,109 @@
+Direct current: better for shorter distances
+Alternative current: better for longer distances
+
+Capacitors: controls the current and keeps it stable
+
+Transformers: used to change the voltage in an alternating current
+
+Resistors: controls how much energy goes somewhere
+
+Grounding: avoids short circuits
+
+Material used for using dissipator: gold copper and aluminum
+
+transistor: switches powers and signal
+
+heat sink: dissipates the heat
+
+small battery coin: stores minimum energy to boot up pc
+
+rectifior: stop negative current from passing
+
+cold dissipation: dont need a mech fan; cools down by nature
+hot dissipation: you need a fan heats up in return
+
+a motherboard generally has 10 thin layers with patterns in each of them
+
+
+    3/5/2024
+
+What does the CPU do?
+Fetch: fetches the command from the computer's RAM
+Decode
+Execute
+
+CRUD: C(reate) R(ead) U(pdate) D(elete)
+
+What is the CPU Clock Rate?
+
+Other components used with the cpu
+
+center of the bridge is called a core
+
+what are the cores 
+what are threads? Virtual cores
+
+
+
+
+
+    3/19/2024
+    why we use the the command line interface?
+cl is faster than gui in most cases 
+    you need to use mouse to navigate
+    some tools are only available in cli
+
+cd: change directory; changes where you want to go
+cd ..: goes back to the previous directory
+cd ../..: goes back to the previous 2 directory
+add / if you want to go through multiple directories
+dir: views all directories and files
+    <DIR> = directory
+    if there is a number beside the file name, it represents the size; may also mean the it is a file or app
+    dir /a shows all, even hidden; best to not use this too happen as windowss dont want you to mess with them
+cls: clear screen/declutters ur command line
+* [insert extension]: shows everything ending with x; * .png: shows everything that is a png
+if you use the up arrow button, you can use previous commands used, basically your command history
+the down arrow goes to the most recent command
+ipconfig /? displays help at the command prompt
+MD: Make Directory 
+DIR /S tells the command dir to include all files and subcategories in the current folder
+rmdir/rd: removes an empty directory
+del: delete a file
+copy con: create a file
+
+
+    4/9/2024
+sudo su: become superuser
+how know if su: #
+exit: go back to normal user
+how know if normal: $
+history: shows history
+pwd: show current directory
+cal 1 10 1560: shows the calendar of 1/10/1560
+who: who is on the system; who is logged in
+clear: cleans the terminal
+shutdown -c: cancels shutdown
+cd ~: goes back to home
+cp [file1][file2]: copy a file to another file
+cp -i: will ask first before copying
+
+vi [insertNameFile]: create a file/ can also open an existing file
+i: insert mode/input mode
+esc: command mode
+:w : you will save and stay in the file
+:wq : save and exit the file
+:q! : exit file and not save changes
+cat [fileName]: see the content of file while not in vi mode
+rm: delete a file without warning
+rm -i: will ask you if you wanna delete it
+touch: create an empty file
+
+while in command mode: 
+    yy: copy a line
+    p: paste
+    dd: delete lines (put a number before dd to say how many lines you wanna delete)
+    /[word]: find a specific string
+
+there are two types of mode: insert mode and command mode
+mv: rename a file

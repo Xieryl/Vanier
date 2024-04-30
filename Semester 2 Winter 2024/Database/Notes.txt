@@ -1,0 +1,308 @@
+    DBMS Functions
+Data dictionary management
+Data storage management
+Data transformation and presentation
+Security management
+Multiuser access controlsBackup and recovery management
+Data integrity management
+Database communication interfaces
+
+    Disadvantages of databases systems
+Increased costs
+management complexity
+maintaining currency
+vendor dependance
+frequent upgrade/replacement cycle
+
+    Data modeling and Data models
+Model: abstractio of a real-world object or event
+data models: repesentation of complex real-world data structure
+database model: type of dm that determines the logical structure of 
+db dtermines which manner data can be stored, organized and manipulated
+
+    Data model basic building blocks
+Entity: anything about which data are to be collected and stored
+Attribute: characteristic of an Entity
+relationship: describes an association among entities
+    one-to-many (1:M) relationship
+    many-to-many (M:N or M:M) relationship
+    one-to-on (1:1) relationship
+constraint: restriction placed on the data
+hierarchial model: each node has a child-parent relationship with another node
+network model: a singel node can have multiple relationships
+relational model: represent data as tables
+object-oriented database model: represents data in the form of objects and classes
+
+
+
+
+    relationships
+One-to-many relationships
+    many employee works in one department, but one employee cannot work in any departments
+one-to-one relationships
+    each student must complete one worksheet; the worksheet can only be completed by one student
+many-to-many relationships
+    a student takes many courses; many takes students take a course
+    
+    the importance of data model
+useful in understanding complexities if the real-world environment
+it is a plan or blueprint for a database design
+facilitate interaction among designers, application programmers, and end users
+
+    entity relationship model (ERM)
+highest level of abstraction for data model
+most commonly used
+main componenets
+    Entities 
+        entity set
+        corresponds to table
+    Attributes
+        characteristics of entities
+        required Attribute: must have a value
+        optional Attribute: may be left empty
+        domain: set of possible values for an Attribute
+        composite identifier: primary key compose od more than one Attribute
+    relationships
+        association between entities
+
+    why do we need an ER diagram
+essential for moedling the data stored in a database
+represents the data in a graphical manners; makes it easier to understand
+
+    Connectivity and cardinality
+connectivity: describes the relationship classification
+cardinality: minimum and maximum number of entity occurences associated with one occurence of related entity
+
+    existence dependance
+dependence: entity that only exists only in db when associated with another related inteity occurence
+independence: can exist apart from one or more related entities
+
+    weak entities
+entity that depends on another entity
+
+    relationship participation
+mandatory participation: every entity in the set is involved in the relationship
+optional: not all entites in the set are involved in the relationship
+
+    relationship degree
+indicates number of entities or participants associated with a relationship
+    unary relationship: a single entity
+    binary relationship: two entities are associated
+    ternary relationship: three entities are associated
+
+    recursive relationships
+relationship that can exist between occurences of the same entity set
+
+
+
+Data definition language (DDL)
+    Definition: used to create and modify the structure of objects in a database using predefined commands and a specific syntax
+        Used to define, modufy, and manage the structure of database objects
+    Create: creates new database objects like tables, indexes, views, and schemas
+    Alter: modifies the structure of existing database objects, such as adding, modifying, or dropping , columns in a table, or renaming
+    Drop: used to delete existing database objects, such as tablsm indexes, views, or schemas
+    Truncate: removes all records from tables, but keep the table structure intact, faster than delete
+    Rename: renames tables, columns and constraints
+    Comment: adds comments
+    Grant: grants specific privileges or permissions on database objects to users or roles
+    Revoke: removes privileges; opposites to grant
+    Create Index: creates indexes on columns in tables
+    Drop Index: removes indexes from tables
+
+SQL server data types
+        define the type of data that can be stored in each column of a table
+    Numeric data types:
+        int: interger data type that stores whole nnumbers in the range of -2^31(-2,147,483,648) to 2^31(2,147,483,647)
+        bigint: larger integer data type that stores whole nuber in the range of -2^63 (-9,223,372,036,854,775,808) to 2^63-1 (9,223,372,036,854,775,807).
+        smallint: small integer data type that stoes whole nnumber in the range of -32,768 to 32,767
+        tinyint: tiny integer that storse whole number in the range of 0 to 255
+        decimal(p, s): fixed precision and scale numeric data type that stores exact numeric values with a specified precision p(total number of digits) and scale s (number of digitis to the right of the decimal point)
+    Character string data types
+        char(n): fixed-lenght character string data types that stores up to n characters
+        varchar(n): variable-length character string data types that stores up to n characters 
+        nvarchar(n): variable-length unicode character string data type that stores up to n characters 
+        text *USE VARCHAR(MAX) INSTEAD: variable-length character string data type for storing large text data 
+        nvarchar(max): variable-length unicode character string data type for storing large text data
+    Binary data types
+        binary(n): fixed-length binary data type that stores up to n bytes
+        varbinary(n): variable-length binary data type that stores up to n bytes
+        image *USE VARBINARY(MAX) INSTEAD*: variable-length binary data type for storing large binary data
+        varbinary(max): variable(max): variable-length binary data type for storing large binary data
+    Date and time 
+        datetime: date and time data type that stoes data and time values from januray1, 1753, to december 31 9999, with an accuracy of 0.0033 seconds
+        datetime2: Date and time data type that stores date and time values from January 1, 0001, to December 31, 9999, with an accuracy of 100 nanoseconds
+        date: date data type that storees date values only
+        time: time data type that time values only
+        smallerdatetime: date and time data type that stores date and times from january 1, 1900, to june, 2079, with and accuracy of 1 minute 
+    other data types
+        bit: boolean data type that stores either 1 or 0
+        uniqueidentifier: unique identifier data type that stores a globally unique identifier
+        xml: xml data type for storing xml documents
+        sql_variant: variable data type that can store calues of various sql server data types
+
+
+SQL server constraints   
+    Primary key constraints: ensures that each row in a table is uniquely identified by a column or comination of columns
+    foreign key constraints: enfroces referential integrity by ensuring that values in a column or combination of columns match values in a related table's primary key or unique key
+    unique constraint: ensures that values in column or combination of columns are unique across the table
+    default constraint: specifies a default value for a column whe no value is explicitly provided during an insert operation
+    not null constraint: ensures that a column cannot contain null values
+
+
+
+Data manipulation language (DML)
+    refers to a set of sql commands used to manage data within a database
+
+    Select: retrieves data from one or more tables or views based on specified criteria
+    Insert: adds new rows of data into table
+    Update:  modifies existing data in a table
+    Delete: removes rows of data from a table
+
+Transactional Control languages
+    used for consistency of the database and for the management of transactions made by the DML commands
+    Transaction: set of sql statements that are executed on the data stored in dbms 
+    we us tcl commadns to make changes permanent
+
+    Commit: saves all changes made during the current transaction permanently to the database
+    Rollback:gets the data or restore the data to the las savepoint or last commited state
+    Savepoint: save the data at a particular point temporarily, so that whenever needed can be rollback to that point
+
+
+Data Control Language
+    Steps to creating a user in SQL server
+        1. Connect to SQL Server through SQL Sevrer Management Studio (SSMS)
+        2. Create a Login. allows a user to connect to the SQL Server instance
+        3. Create a User; can be mapped to  specific database
+
+    Login Names = Server Level 
+    User Names = Database Level 
+    Login Names != User Names 
+    login: allows to connect to a SQL Server instance
+    User: gives the login rights to access a database
+
+
+
+
+Roles 
+    Powerful tool for managing permissions by grouping users with similar requiremetns together
+
+
+    Server Roles
+        Fixed Server Roles
+        predefined roles that come with specidic permissions and are designed to control access to server-wide ressources and operations
+        Convenient as you dont need to manually assign permissions
+        Roles ordered by number of permissions it has
+            sysadmin
+                Unrestricted access to the entire SQL Server instance; any actions on the server: configuration changes, database creation, and security management
+            serveradmin
+                able to change server-wide configuration options and shut down the server; cant create or modify logins or databases
+            setupadmin
+                can add or move linked servers and perform other setup-related tasks + other setup-related tasks
+            securityadmin
+                can manage server-kevel security; adding and remocing logins and assigning permissions
+            processadmin
+                can end processes running o the SQL Server Instance 
+            bulkadmin
+                can run the bulk insert command and load data into database
+            diskadmin
+                can manage disk files
+            public 
+                every login belongs to the public server role by default; premissions granted to the public 
+    Database Roles
+        Fixed Database Roles
+            db_owner
+                can perform all configuration and maintenance activites on the databse; can also drop the database in SQL Server 
+            db_securityadmin
+                can modify role membership for custom roles only and manage permissions
+            db_accessasdmin
+                can add or remove access to the database for Windoes logins 
+            db_backuppoperator
+                can back up the database
+            db_ddladmin
+                can run a ny Data Definition Language (DDL) command in a database
+            db_datawriter
+                can add, delete, or change data in all user tables
+            db_datareader
+                can read all data from all user tables 
+            db_denydatawriter
+                cannot add, modify, or delete any data
+            db_denydatareader
+                cannot read any data 
+        User-Defined Database Roles
+
+
+
+
+
+transactions
+    transactions make changes to the database: creating, updating or deleting a record from a table
+
+    Transactions follow the Principles of ACID: 
+        Atomicity
+            Treated as single, indivisible unit work
+        Consistency
+            Must ensure that the database is consistent before and after the execution of a transaction 
+                foreign key relationships and unique constraints must stay consistent. 
+        Isolation
+            Must be isolated in order to prevent interference and maintain integrity; must operate 
+            as if its the only transaction operating
+        Durability
+            once a transaction is commited, it is now permanent and can endure system failures;
+            non-volatile = durable
+
+    Transaction modes or types in SQL Server
+        Implicit Transactions (Auto-Commit)
+            Transaction that is automatically commited after execution if completed successfully
+        Explicit Transactions (Manual Commit/Rollback)
+            You must use BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION
+        Save-point Transactions
+            Allow save points via SAVE TRANSACTION, a form of rollback
+
+    Transaction Control 
+        Manages transactions, ensuring data integrity and consistency
+
+        BEGIN TRANSACTION
+            Start new transaction
+        COMMIT TRANSACTION
+            Save changes made druing the current transaction to the database
+        ROLLBACK TRANSACTION
+            Undoes all changes made during the current transaction and restores
+            database to its previous state
+        SAVE TRANSACTION
+            Sets savepoint withing the current transaction, allowing rollback to that
+            point if needed
+        SET TRANSACTION
+            Sets characteristics (isolation level, whether it's read-only or read/write)
+
+    Transactions State 
+        Indicates how the tansactions go during their lifetime; current and future states 
+            Active State 
+                Called so while transaction's instructions are being executed
+            Partially Commited 
+                when all "read and write" operations are comppleted without errors
+            Failed State
+                instruction failure
+            Aborted State 
+                when any kind of failure occurs
+            Commited State 
+                when the changes are made permanent on the database
+            Terminated State
+                no rollback 
+
+
+    Note 1
+        Individual SQL statements (CREATE TABLE, INSERT INTO, DELETE, UPDATE)
+        are normally automatically commited after execution if not  wrapped withing transaction commands
+    Note 2
+        we can include CREATE TABLE command withing a transaction
+    Note 3
+
+    @@ERROR
+
+        Scenario 1: Successful Commit 
+        Scenario 2: Error and Rollback 
+    
+    Classification of Transactions 
+        Nature
+        Duration
+        Isolation Level
