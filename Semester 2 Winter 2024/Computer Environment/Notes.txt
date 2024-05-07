@@ -205,7 +205,7 @@ Unix Terminal
     there are two types of mode: insert mode and command mode
     mv: rename a file
 
-    kali-win-kex
+    kali-win-kex: opens the gui for kali linux
 
 Monitor
     LCD (Liquid crystal display):
