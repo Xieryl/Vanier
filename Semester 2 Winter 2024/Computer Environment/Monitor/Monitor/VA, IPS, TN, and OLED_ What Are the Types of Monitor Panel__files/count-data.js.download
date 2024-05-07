@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"e","comments":{"zero":"0","multiple":"{num}","one":"1"}},"counts":[{"id":"adrenaline-490918","comments":13},{"id":"adrenaline-489218","comments":15},{"id":"adrenaline-479989","comments":1},{"id":"adrenaline-488816","comments":1},{"id":"adrenaline-490303","comments":14},{"id":"adrenaline-488725","comments":43},{"id":"adrenaline-488334","comments":5},{"id":"adrenaline-488303","comments":3},{"id":"adrenaline-391983","comments":67}]});
+}

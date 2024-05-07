@@ -13,7 +13,7 @@ SET comma = ,
 
 SET combine = %variable_name%  %comma% %tringB%
 
-dir "C:\Program Filles"> C:\Users\6243515\Downloads\programs.txt
+tree "C:\Users\efren"> C:\Users\efren\Downloads\LMAO.txt
 echo "the ist is complete"
 
 
