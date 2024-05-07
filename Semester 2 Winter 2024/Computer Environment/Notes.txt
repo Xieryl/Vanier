@@ -25,25 +25,6 @@ hot dissipation: you need a fan heats up in return
 a motherboard generally has 10 thin layers with patterns in each of them
 
 
-    3/5/2024
-
-What does the CPU do?
-Fetch: fetches the command from the computer's RAM
-Decode
-Execute
-
-CRUD: C(reate) R(ead) U(pdate) D(elete)
-
-What is the CPU Clock Rate?
-
-Other components used with the cpu
-
-center of the bridge is called a core
-
-what are the cores 
-what are threads? Virtual cores
-
-
 
 
 
@@ -53,57 +34,195 @@ cl is faster than gui in most cases
     you need to use mouse to navigate
     some tools are only available in cli
 
-cd: change directory; changes where you want to go
-cd ..: goes back to the previous directory
-cd ../..: goes back to the previous 2 directory
-add / if you want to go through multiple directories
-dir: views all directories and files
+
+
+
+
+
+
+NOTES FOR FINAL EXAMS
+Motherboard 
+    Primary circuit board of a computer; backbone of the computer, 
+    communicating between all the other hardware components
+    Primary components and features: 
+        Processor Socket
+        Memory SLots
+        Expansion SLots
+        NIOS/UEFI Chip
+        SATA PORTS
+        USB Headers
+        Power Connectors
+        Rear Panel Connectors
+        Chipset
+        CMOS battery
+        Ports and Connectors
+        Expansion Capabilities
+        Onboard Features 
+        BIOS/UEFI
+        Form Factor
+
+PSU
+    Capacitors: controls the current and keeps it stable
+    Transformers: used to change the voltage in an alternating current
+    Resistors: controls how much energy goes somewhere
+    transistor: switches powers and signal
+
+    IF(efficiencyRating => 0.8){
+    powerUsed = 0.8+
+    powerLost = 0.2-
+    }
+
+
+Memory
+    Primary Memory
+        Why need primary memory?
+            Fast Acces to Data
+            Volatile storage
+            Operating system loading
+            application execution
+            data caching
+            buffering 
+            temporary data storage
+            Supporting CPUEnhancing Performance
+            Immediate Data Availability
+        Types of Primary memory
+            ROM (Read Only Memory / Permanent Memory)
+                You can only read the data, but not modify it; non-volatile
+            RAM (Random Access Memory)
+                Data that can be read and modified; Volatile
+            Flash Memory
+                Data that can be eletrically replaced; Non-volatile
+            Cache Memory
+                Extremely fast data that resides within the cpu to reach high access time
+    Secondary Memory
+        What is it?
+            used for storing data that is not frequently accessed compared to
+            data in Primary Storage; preserves data unless modified; non-volatile
+        Why need it?
+            Isolation from internet for better security
+            At a very low cost
+        Types of Secondary Storage Devices
+            Magnetic Storage Devices    
+                Uses magnetization to wrtie, rewrite and acess data
+                    Hard drives
+                    Floppy Disks
+            Solid State Drives (SSD)
+                uses flash memory to store and retrieve data
+        Features
+            Non-Volatile
+            Capacity
+            Speed
+CPU
+    What does the CPU do?
+    Fetch: fetches the command from the computer's RAM
+    Decode
+    Execute
+
+    CRUD: C(reate) R(ead) U(pdate) D(elete)
+
+    What is the CPU Clock Rate?
+
+    Other components used with the cpu
+
+    center of the bridge is called a core
+
+    what are the cores 
+    what are threads? Virtual cores
+OS
+    What is it?
+        Manages the computer's memory and processes, software and hardware.
+        Allows the user to communicate with the pc without hacing to know the computer's language.
+    What is its job?
+        Managaes all of the software and hardware of the computer.
+        Allows programs to access the CPU, memory and storage.
+        Uses GUI to help facilitate everything; icons buttons menus
+    Types of OS
+        Microsoft Windows
+        macOS
+        Linux
+
+BATCH
+    @echo off OR ECHO OFF: Start of the batch file
+    Pause: end of the batch file
+    ECHO: Print (if you want to have space between lines, type in "echo.")
+    SET: assign data to a variable
+    %M%: Call out a variable (in this case, the variable would be 'M')
+    :[Title] : asssign a title
+    goto: go back to a certain point 
+    tree "C:\Users\efren"> C:\Users\efren\Downloads\LMAO.txt: tells the cmd to print prompt into a text file
+
+    cd: change directory; changes where you want to go
+    cd ..: goes back to the previous directory
+    cd ../..: goes back to the previous 2 directory
+    add / if you want to go through multiple directories
+    dir: views all directories and files
     <DIR> = directory
     if there is a number beside the file name, it represents the size; may also mean the it is a file or app
     dir /a shows all, even hidden; best to not use this too happen as windowss dont want you to mess with them
-cls: clear screen/declutters ur command line
-* [insert extension]: shows everything ending with x; * .png: shows everything that is a png
-if you use the up arrow button, you can use previous commands used, basically your command history
-the down arrow goes to the most recent command
-ipconfig /? displays help at the command prompt
-MD: Make Directory 
-DIR /S tells the command dir to include all files and subcategories in the current folder
-rmdir/rd: removes an empty directory
-del: delete a file
-copy con: create a file
+    cls: clear screen/declutters ur command line
+    * [insert extension]: shows everything ending with x; * .png: shows everything that is a png
+    if you use the up arrow button, you can use previous commands used, basically your command history
+    the down arrow goes to the most recent command
+    ipconfig /? displays help at the command prompt
+    MD: Make Directory 
+    DIR /S tells the command dir to include all files and subcategories in the current folder
+    rmdir/rd: removes an empty directory
+    del: delete a file
+    copy con: create a file
 
+Unix Terminal
+    sudo su: become superuser
+    how know if su: #
+    exit: go back to normal user
+    how know if normal: $
+    history: shows history
+    pwd: show current directory
+    cal 1 10 1560: shows the calendar of 1/10/1560
+    who: who is on the system; who is logged in
+    clear: cleans the terminal
+    shutdown -c: cancels shutdown
+    cd ~: goes back to home
+    cp [file1][file2]: copy a file to another file
+    cp -i: will ask first before copying
 
-    4/9/2024
-sudo su: become superuser
-how know if su: #
-exit: go back to normal user
-how know if normal: $
-history: shows history
-pwd: show current directory
-cal 1 10 1560: shows the calendar of 1/10/1560
-who: who is on the system; who is logged in
-clear: cleans the terminal
-shutdown -c: cancels shutdown
-cd ~: goes back to home
-cp [file1][file2]: copy a file to another file
-cp -i: will ask first before copying
+    vi [insertNameFile]: create a file/ can also open an existing file
+    i: insert mode/input mode
+    esc: command mode
+    :w : you will save and stay in the file
+    :wq : save and exit the file
+    :q! : exit file and not save changes
+    cat [fileName]: see the content of file while not in vi mode
+    rm: delete a file without warning
+    rm -i: will ask you if you wanna delete it
+    touch: create an empty file
 
-vi [insertNameFile]: create a file/ can also open an existing file
-i: insert mode/input mode
-esc: command mode
-:w : you will save and stay in the file
-:wq : save and exit the file
-:q! : exit file and not save changes
-cat [fileName]: see the content of file while not in vi mode
-rm: delete a file without warning
-rm -i: will ask you if you wanna delete it
-touch: create an empty file
+    while in command mode: 
+        yy: copy a line
+        p: paste
+        dd: delete lines (put a number before dd to say how many lines you wanna delete)
+        /[word]: find a specific string
 
-while in command mode: 
-    yy: copy a line
-    p: paste
-    dd: delete lines (put a number before dd to say how many lines you wanna delete)
-    /[word]: find a specific string
+    there are two types of mode: insert mode and command mode
+    mv: rename a file
 
-there are two types of mode: insert mode and command mode
-mv: rename a file
+    kali-win-kex
+
+Monitor
+    LCD (Liquid crystal display):
+    LED (Light emitting diode): type of bulb used in monitors 
+
+    Types of Panels
+    TN Panel (Twisted Nematic): 
+        liquid crystal is twisted; most cheapest; high refresh rate and response time
+    IPS Panel (In-plane-switching): 
+        LCD panels; aligned parallel with glass; accurate colors
+    VA Panel (Vertical alignment):
+        the most mid of all of them; not bad not good at anything
+
+    Monitor OLED (organic light-emitting diode):
+        diff tech from led and LCD
+        each pixel produce their own light 
+        better color, brightness, contrast and image quality
+        contrast of 100000:1 vs 1000:1
+Troubleshooting
+    UEFI/BIOS gives beep codes when a post error occurs during the boot

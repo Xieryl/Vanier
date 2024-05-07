@@ -158,29 +158,114 @@ Data manipulation language (DML)
     Update:  modifies existing data in a table
     Delete: removes rows of data from a table
 
-Transactional Control languages
-    used for consistency of the database and for the management of transactions made by the DML commands
-    Transaction: set of sql statements that are executed on the data stored in dbms 
-    we us tcl commadns to make changes permanent
-
-    Commit: saves all changes made during the current transaction permanently to the database
-    Rollback:gets the data or restore the data to the las savepoint or last commited state
-    Savepoint: save the data at a particular point temporarily, so that whenever needed can be rollback to that point
 
 
-Data Control Language
-    Steps to creating a user in SQL server
-        1. Connect to SQL Server through SQL Sevrer Management Studio (SSMS)
-        2. Create a Login. allows a user to connect to the SQL Server instance
-        3. Create a User; can be mapped to  specific database
 
-    Login Names = Server Level 
-    User Names = Database Level 
-    Login Names != User Names 
-    login: allows to connect to a SQL Server instance
-    User: gives the login rights to access a database
+Views
+virtual table based on the result of a set of SELECT Query. Predefined query
+    Virtual tables
+        Virtual tables; dont store data on their own
+    Stored Query
+        Defined by a query that retrieves data from one or more tables
+    Abstraction Layer
+        Lets you interact with the data in a simplified manner
+    Security
+        can be used to restrict access to certain columns or rows of a table
+    Performance
+        can improve performanc ebe precomputing complex joins or aggregations
+    Updatability
+        Can be updatable
+    Materialized Views
+        type of view that stored data physically; faster query performance
+
+Index
+    Improving Query Performance
+        speeds up the data retrieval process 
+    Optimizing Data Retrieval
+        Useful for Select statements with WHERE, JOIN, and ORDER BY; improve performance
+    Enforcing Uniqueness
+        no duplicate calues exist in the indexed columns 
+    Supporting constraints
+        ensure data integrity and consitency
+    Facilitating Sorting and Grouping
+        avoid the need for expensice sorting operations
+    Enhancing Joins
+        allows engine to quicly locate matching rows between related tables
+    Accelerating Data 
+        strike a balance read and write performance
+
+Sequence
+Used to generate primary key values
+
+Functions
+    UDFs functions made by the user
+        Scalar Functions
+            return single value; accept input parameters
+        Inline Table-Valued Functions
+            return a table
+        Multi Statement Table Valued Functions
+            multiple statements
+    System Functions
+        Scalar Functions
+            single value; return single value
+            GETDATE(), LEN(), UPPER(), LOWER()
+        Aggregate Functions
+            set of values; return single value
+            SU(), AVG(), COUNT(), MIN(), MAX()
+        Ranking Functions
+            assign rank to each row
+            ROW_NUMBER(), RANK((), DENSE_RANK(), NTILE())
+        Window Functions
+            LAGE(), LEAD(), FIRST_VALUE(), LAST_VALUE()
 
 
+Stored Procedures built in functions
+    Features
+        Reduced Traffic
+            only needs the name of the stored procedure and its parameters
+        Stronger Security
+            removes the need for permissions to be granted at the database object level and simplifies the security layers
+        Reusable 
+            reduces code inconsistency
+        Easy Maintenance
+            easuer to maintain without restarting or deploying application
+        Improved Performance
+            creates an execution plan reused for subsequent executions
+    
+    Types of Stored Procedures
+        Simple SP
+            used for tasks such as querying or updating data in a database
+        Parameterized SP
+            filters data 
+        System SP 
+            predefined procedures; sp_helpdb, sp_configure, sp_who
+
+
+Differences between Function and Procedures 
+Function
+Procedure
+
+unlike stored procedure, functions return:
+    single value
+    accepts only input parameters
+    not used to insert, update, or delete
+Like stored procedures, functions can be nested up to 32 levels
+
+
+
+
+Triggers
+    DML (data manipulation language triggers)
+        fired in respong to data manipulation; insert, update, delete
+        After Triggers
+            (inset update delete)
+        Instead of Triggers
+            refuses smt and chane it or smt like that
+
+    DDL
+        CREATE ALTER Drop
+
+    LOGON
 
 
 Roles 
@@ -232,7 +317,27 @@ Roles
 
 
 
+Transactional Control languages
+    used for consistency of the database and for the management of transactions made by the DML commands
+    Transaction: set of sql statements that are executed on the data stored in dbms 
+    we us tcl commadns to make changes permanent
 
+    Commit: saves all changes made during the current transaction permanently to the database
+    Rollback:gets the data or restore the data to the las savepoint or last commited state
+    Savepoint: save the data at a particular point temporarily, so that whenever needed can be rollback to that point
+
+
+Data Control Language
+    Steps to creating a user in SQL server
+        1. Connect to SQL Server through SQL Sevrer Management Studio (SSMS)
+        2. Create a Login. allows a user to connect to the SQL Server instance
+        3. Create a User; can be mapped to  specific database
+
+    Login Names = Server Level 
+    User Names = Database Level 
+    Login Names != User Names 
+    login: allows to connect to a SQL Server instance
+    User: gives the login rights to access a database
 
 transactions
     transactions make changes to the database: creating, updating or deleting a record from a table
